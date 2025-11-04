@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои увлечения</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+        }
+        
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+        }
+        
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мои увлечения: футбол и игры</h1>
+    </header>
+    
+    <nav>
+        <a href="#" onclick="showPage('main')">Главная</a>
+        <a href="#" onclick="showPage('football')">Футбол</a>
+        <a href="#" onclick="showPage('games')">Игры</a>
+        <a href="#" onclick="showPage('about')">Обо мне</a>
+    </nav>
+    
+    <div class="container">
+        <!-- Главная страница -->
+        <div id="main" class="page active">
+            <h2>Добро пожаловать!</h2>
+            <p>Этот сайт о моих увлечениях. Я люблю футбол и компьютерные игры.</p>
+            <p>На этом сайте я расскажу немного о каждом из них.</p>
+            <p>Надеюсь, вам будет интересно!</p>
+        </div>
+        
+        <!-- Страница о футболе -->
+        <div id="football" class="page">
+            <h2>Футбол</h2>
+            <p>Я люблю футбол с детства. Смотрю матчи по телевизору и играю со своей командой.</p>
+            <p>Моя любимая команда - Спартак. Я болею за них уже много лет.</p>
+            <p>Еще мне нравится сборная России. Всегда переживаю за наши команды.</p>
+            <p>Лучший игрок для меня - Месси. У него отличная техника.</p>
+        </div>
+        
+        <!-- Страница об играх -->
+        <div id="games" class="page">
+            <h2>Компьютерные игры</h2>
+            <p>В игры я играю с тех пор, как у нас появился компьютер. Это было давно.</p>
+            <p>Сначала это были простые игры, сейчас играю в разные.</p>
+            <p>Люблю стратегии и гонки. Еще нравятся игры про футбол, например FIFA.</p>
+            <p>Иногда играю в онлайн-игры с друзьями. Это весело.</p>
+        </div>
+        
+        <!-- Страница обо мне -->
+        <div id="about" class="page">
+            <h2>Обо мне</h2>
+            <p>Меня зовут Арман. Я учусь в университете.</p>
+            <p>Футболом увлекаюсь с 10 лет. Игры тоже люблю с детства.</p>
+            <p>Еще мне нравится музыка и фильмы.</p>
+            <p>Этот сайт я сделал для задания по веб-программированию.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Мой сайт об увлечениях</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Скрываем все страницы
+            var pages = document.getElementsByClassName('page');
+for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+            }
+            
+            // Показываем выбранную страницу
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
